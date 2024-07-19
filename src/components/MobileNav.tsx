@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/sheet";
 import { useAuth0 } from "@auth0/auth0-react";
 import { CircleUserRound, Menu } from "lucide-react";
-import React from "react";
 import MobileNavLinks from "./MobileNavLinks";
 
 function MobileNav() {
