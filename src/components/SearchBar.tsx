@@ -3,6 +3,7 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Search } from "lucide-react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -29,9 +30,9 @@ function SearchBar({ onSubmit, onReset, placeHolder, searchQuery }: Props) {
     },
   });
 
-  //   useEffect(() => {
-  //     form.reset({ searchQuery });
-  //   }, [form, searchQuery]);
+  useEffect(() => {
+    form.reset({ searchQuery });
+  }, [form, searchQuery]);
 
   const handleReset = () => {
     form.reset({
