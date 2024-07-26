@@ -20,7 +20,7 @@ export type CartItem = {
 
 function DetailPage() {
   const { restaurantId } = useParams();
-  const { restaurant, isLoading } = useGetRestaurant(restaurantId);
+  const { restaurant } = useGetRestaurant(restaurantId);
 
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
     const storedCartItems = sessionStorage.getItem(`cartItems-${restaurantId}`);
