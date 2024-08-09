@@ -1,30 +1,88 @@
-# React + TypeScript + Vite
+# Food Order App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend service for a food ordering application, built with React, TypeScript, and Vite. It includes various UI components and uses Tailwind CSS for styling, as well as Auth0 for authentication.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+Before you begin, ensure you have the following installed:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js (>= 14.x)
+- npm (>= 6.x)
 
-- Configure the top-level `parserOptions` property like this:
+### Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone the repository:
+  
+2. Install the dependencies:
+    ```sh
+    npm install
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Configuration
+
+1. Create a `.env` file in the root directory and add your environment variables. For example:
+    ```env
+    VITE_AUTH0_DOMAIN=your_auth0_domain
+    VITE_AUTH0_CLIENT_ID=your_auth0_client_id
+    ```
+
+### Scripts
+
+Here’s a breakdown of the scripts defined in the `package.json` file:
+
+- **dev**: Starts the development server using Vite.
+    ```sh
+    npm run dev
+    ```
+
+- **build**: Compiles the TypeScript files and builds the project using Vite.
+    ```sh
+    npm run build
+    ```
+
+- **lint**: Runs ESLint to lint the codebase.
+    ```sh
+    npm run lint
+    ```
+
+- **preview**: Previews the production build locally using Vite.
+    ```sh
+    npm run preview
+    ```
+
+### Running the Project
+
+1. Start the development server:
+    ```sh
+    npm run dev
+    ```
+
+2. The server should be running at `http://localhost:3000`.
+
+### Dependencies
+
+- **react**: JavaScript library for building user interfaces.
+- **react-dom**: Entry point of the DOM-related rendering paths.
+- **react-router-dom**: Declarative routing for React.
+- **@auth0/auth0-react**: Auth0 integration for React.
+- **@hookform/resolvers**: Validation resolvers for React Hook Form.
+- **tailwindcss**: Utility-first CSS framework.
+- **zod**: TypeScript-first schema declaration and validation library.
+
+### Dev Dependencies
+
+- **vite**: Next generation frontend tooling.
+- **typescript**: TypeScript language support.
+- **eslint**: Pluggable JavaScript linter.
+- **tailwindcss**: Tailwind CSS framework.
+- **@vitejs/plugin-react**: Vite plugin for React.
+- **autoprefixer**: PostCSS plugin to parse CSS and add vendor prefixes.
+- **postcss**: Tool for transforming CSS with JavaScript.
+- **@typescript-eslint/eslint-plugin**: TypeScript plugin for ESLint.
+- **@typescript-eslint/parser**: Parser for TypeScript.
+- **@types/node**: Type definitions for Node.js.
+- **@types/react**: Type definitions for React.
+- **@types/react-dom**: Type definitions for React DOM.
+
